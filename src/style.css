@@ -1,0 +1,203 @@
+/* ===============================
+   ROOT DESIGN TOKENS
+================================= */
+:root {
+  --primary-black: #1A0000;
+  --secondary-dark: #333333;
+  --accent-blue: #0b3d91;
+
+  --font-main: simplon, Arial, sans-serif;
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  --space-xs: 4px;
+  --space-sm: 6px;
+  --space-md: 10px;
+  --space-lg: 15px;
+
+  /* font scale */
+  --fs-xs: 12.5px;
+  --fs-sm: 13px;
+  --fs-base: 14px;
+  --fs-md: 15px;
+  --fs-lg: 16px;
+  --fs-xl: 28px;
+}
+
+/* ===============================
+   FONT FACE
+================================= */
+@font-face {
+  font-family: "simplon";
+  src: url("/SimplonNorm-Regular.otf");
+  font-display: swap;
+}
+
+/* ===============================
+   GLOBAL
+================================= */
+body {
+  font-family: var(--font-main);
+  color: var(--primary-black);
+  background: #fff;
+  margin: 0;
+}
+
+.container {
+  width: 900px;
+  margin: var(--space-lg) auto;
+}
+
+/* ===============================
+   AUTHOR
+================================= */
+.author {
+  text-align: center;
+  margin-bottom: var(--space-md);
+}
+
+.author h1 {
+  margin: 0;
+  font-size: var(--fs-xl);
+  letter-spacing: 2px;
+  font-weight: var(--fw-bold);
+}
+
+.author p {
+  margin-top: var(--space-xs);
+  font-size: var(--fs-md);
+  font-weight: var(--fw-medium);
+  color: var(--secondary-dark);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* ===============================
+   CONTACT
+================================= */
+.contact {
+  text-align: center;
+  font-size: var(--fs-base);
+  margin-bottom: var(--space-lg);
+  line-height: 1.6;
+}
+
+.contact-links a {
+  margin: 0 var(--space-md);
+}
+
+.separator {
+  margin: 0 var(--space-sm);
+}
+
+a {
+  color: var(--accent-blue);
+  text-decoration: none;
+  font-weight: var(--fw-medium);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ===============================
+   SECTION TITLES
+================================= */
+.section-title,
+.additional-title,
+.education-title {
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  margin-top: var(--space-md);
+  margin-bottom: var(--space-sm);
+}
+
+/* ===============================
+   BODY TEXT
+================================= */
+p,
+li {
+  font-size: var(--fs-base);
+  line-height: 1.6;
+  color: var(--secondary-dark);
+}
+
+ul {
+  margin: var(--space-xs) 0 var(--space-md) 20px;
+  padding: 0;
+}
+
+/* ===============================
+   JOB / EDUCATION HEADER
+================================= */
+.jobsection,
+.edu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.job-title,
+.degree {
+  font-size: var(--fs-md);
+  font-weight: var(--fw-semibold);
+}
+
+.job-meta {
+  font-size: var(--fs-xs);
+  color: var(--secondary-dark);
+}
+
+/* ===============================
+   SKILLS & ADDITIONAL
+================================= */
+.skill-row,
+.additional-row {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  margin-bottom: var(--space-sm);
+}
+
+.skill-title,
+.additional-label {
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+}
+
+.skill-items,
+.additional-value {
+  font-size: var(--fs-base);
+}
+
+/* ===============================
+   EDUCATION BLOCK
+================================= */
+.education-block {
+  margin-top: var(--space-sm);
+  font-size: var(--fs-base);
+}
+
+.edu-date {
+  font-size: var(--fs-xs);
+  color: var(--secondary-dark);
+}
+
+.university {
+  font-size: var(--fs-base);
+  color: var(--secondary-dark);
+  margin-top: var(--space-xs);
+}
+
+/* ===============================
+   PRINT OPTIMIZATION
+================================= */
+@media print {
+  .container {
+    width: 100%;
+    margin: 0;
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "personalInfo": {
+    "name": "ARMAN RASOOL",
+    "jobTitle": "Frontend Developer",
+    "location": "Bareilly, Uttar Pradesh, India",
+    "phone": "+91-9634743199",
+    "email": "rasoolarman7@gmail.com",
+    "links": [
+      {
+        "label": "Portfolio",
+        "url": "https://armanrasool.netlify.app/"
+      },
+      {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/arman-rasool-b74b04194"
+      },
+      {
+        "label": "GitHub",
+        "url": "https://github.com/Arman091"
+      },
+      {
+        "label": "LeetCode",
+        "url": "https://leetcode.com/u/arman_091/"
+      }
+    ]
+  },
+  "summary": "Frontend Developer with 2.5+ years of hands-on experience building user-centric, scalable web applications using React.js, Next.js, JavaScript, and TypeScript in Agile Scrum environments. Contributed to 10+ projects, delivering responsive interfaces, integrating REST APIs, and optimizing performance.",
+  "workExperiences": [
+    {
+      "title": "SDE-1 Frontend – Appscrip",
+      "period": "Apr 2024 – Present",
+      "responsibilities": [
+        "Designed and developed secure multi-user dashboard features using React.js, Next.js, and TypeScript with JWT authentication and role-based authorization.",
+        "Integrated Strapi CMS for dynamic admin-driven content updates.",
+        "Collaborated with UI/UX designers and backend teams to integrate frontend components via REST APIs.",
+        "Optimized applications for performance, scalability, and cross-browser compatibility.",
+        "Conducted code reviews and mentored junior developers."
+      ]
+    },
+    {
+      "title": "Web Developer – Driver on Hire",
+      "period": "Dec 2023 – Mar 2024",
+      "responsibilities": [
+        "Integrated Google Places API and Mapbox for geolocation workflows.",
+        "Implemented real-time FCM push notifications for driver assignments.",
+        "Improved performance and Core Web Vitals compliance."
+      ]
+    }
+  ],
+  "technicalSkills": [
+    {
+      "category": "Languages",
+      "items": "JavaScript (ES6+), TypeScript"
+    },
+    {
+      "category": "Frameworks",
+      "items": "React.js, Next.js, Redux, Zustand"
+    },
+    {
+      "category": "Styling",
+      "items": "HTML5, CSS3, Tailwind CSS"
+    },
+    {
+      "category": "APIs & Tools",
+      "items": "REST APIs, Axios, Strapi CMS, JWT, Google Places API, Mapbox"
+    },
+    {
+      "category": "Dev Tools",
+      "items": "Git, GitHub Actions, Docker, Webpack, AWS"
+    }
+  ],
+  "education": {
+    "degree": "Master of Computer Application",
+    "period": "July 2023 – June 2025",
+    "university": "Dr. A.P.J. Abdul Kalam Technical University"
+  },
+  "additionalInfo": [
+    {
+      "label": "Exam Achievement",
+      "value": "NIMCET – All India Rank 1180"
+    },
+    {
+      "label": "Certification",
+      "value": "React – The Complete Guide (Academind)"
+    },
+    {
+      "label": "Soft Skills",
+      "value": "Research, Teamwork, Adaptability, Communication, Problem Solving"
+    }
+  ]
+}
