@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arman Rasool - Resume</title>
+    <style>
+        /* ===============================
+   ROOT DESIGN TOKENS
+================================= */
+        :root {
+            --primary-black: #1A0000;
+            --secondary-dark: #333333;
+            --accent-blue: #0b3d91;
+
+            --font-main: simplon, Arial, sans-serif;
+
+            --fw-regular: 400;
+            --fw-medium: 500;
+            --fw-semibold: 600;
+            --fw-bold: 700;
+
+            --space-xs: 4px;
+            --space-sm: 6px;
+            --space-md: 10px;
+            --space-lg: 15px;
+
+            /* font scale */
+            --fs-xs: 12.5px;
+            --fs-sm: 13px;
+            --fs-base: 14px;
+            --fs-md: 15px;
+            --fs-lg: 16px;
+            --fs-xl: 28px;
+        }
+
+        /* ===============================
+   FONT FACE
+================================= */
+        @font-face {
+            font-family: "simplon";
+            src: url("./SimplonNorm-Regular.otf");
+            font-display: swap;
+        }
+
+        /* ===============================
+   GLOBAL
+================================= */
+        body {
+            font-family: var(--font-main);
+            color: var(--primary-black);
+            background: #fff;
+            margin: 0;
+        }
+
+        .container {
+            width: 900px;
+            margin: var(--space-lg) auto;
+        }
+
+        /* ===============================
+   AUTHOR
+================================= */
+        .author {
+            text-align: center;
+            margin-bottom: var(--space-md);
+        }
+
+        .author h1 {
+            margin: 0;
+            font-size: var(--fs-xl);
+            letter-spacing: 2px;
+            font-weight: var(--fw-bold);
+        }
+
+        .author p {
+            margin-top: var(--space-xs);
+            font-size: var(--fs-md);
+            font-weight: var(--fw-medium);
+            color: var(--secondary-dark);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* ===============================
+   CONTACT
+================================= */
+        .contact {
+            text-align: center;
+            font-size: var(--fs-base);
+            margin-bottom: var(--space-lg);
+            line-height: 1.6;
+        }
+
+        .contact-links a {
+            margin: 0 var(--space-md);
+        }
+
+        .separator {
+            margin: 0 var(--space-sm);
+        }
+
+        a {
+            color: var(--accent-blue);
+            text-decoration: none;
+            font-weight: var(--fw-medium);
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* ===============================
+   SECTION TITLES
+================================= */
+        .section-title,
+        .additional-title,
+        .education-title {
+            font-size: var(--fs-lg);
+            font-weight: var(--fw-bold);
+            text-transform: uppercase;
+            margin-top: var(--space-md);
+            margin-bottom: var(--space-sm);
+        }
+
+        /* ===============================
+   BODY TEXT
+================================= */
+        p,
+        li {
+            font-size: var(--fs-base);
+            line-height: 1.6;
+            color: var(--secondary-dark);
+        }
+
+        ul {
+            margin: var(--space-xs) 0 var(--space-md) 20px;
+            padding: 0;
+        }
+
+        /* ===============================
+   JOB / EDUCATION HEADER
+================================= */
+        .jobsection,
+        .edu-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .job-title,
+        .degree {
+            font-size: var(--fs-md);
+            font-weight: var(--fw-semibold);
+        }
+
+        .job-meta {
+            font-size: var(--fs-xs);
+            color: var(--secondary-dark);
+        }
+
+        /* ===============================
+   SKILLS & ADDITIONAL
+================================= */
+        .skill-row,
+        .additional-row {
+            display: grid;
+            grid-template-columns: 150px 1fr;
+            margin-bottom: var(--space-sm);
+        }
+
+        .skill-title,
+        .additional-label {
+            font-size: var(--fs-sm);
+            font-weight: var(--fw-semibold);
+        }
+
+        .skill-items,
+        .additional-value {
+            font-size: var(--fs-base);
+        }
+
+        /* ===============================
+   EDUCATION BLOCK
+================================= */
+        .education-block {
+            margin-top: var(--space-sm);
+            font-size: var(--fs-base);
+        }
+
+        /* ===============================
+   PRINT OPTIMIZATION
+================================= */
+        @media print {
+            .container {
+                width: 100%;
+                margin: 0;
+            }
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- NAME -->
+        <div class="author">
+            <h1>ARMAN RASOOL</h1>
+            <!-- job Title -->
+            <p>Frontend Developer</p>
+        </div>
+
+        <!-- CONTACT -->
+        <div class="contact">
+            <div class="contact-line">
+                Bareilly, Uttar Pradesh, India
+                <span class="separator">•</span>
+                <a href="tel:+919634743199">+91-9634743199</a>
+                <span class="separator">•</span>
+                <a href="mailto:rasoolarman7@gmail.com">rasoolarman7@gmail.com</a>
+            </div>
+
+            <div class="contact-links">
+                <a href="https://armanrasool.netlify.app/" target="_blank">Portfolio</a>
+                <a href="https://www.linkedin.com/in/arman-rasool-b74b04194" target="_blank">LinkedIn</a>
+                <a href="https://github.com/Arman091" target="_blank">GitHub</a>
+                <a href="https://leetcode.com/u/arman_091/" target="_blank">LeetCode</a>
+            </div>
+        </div>
+
+
+        <!-- SUMMARY -->
+        <div class="section-title">Summary</div>
+        <p>
+            Frontend Developer with 2.5+ years of hands-on experience building user-centric, scalable web applications
+            using React.js, Next.js, JavaScript, and TypeScript in Agile Scrum environments. Contributed to 10+
+            projects, delivering responsive interfaces, integrating REST APIs, and optimizing performance.
+        </p>
+
+        <!-- WORK EXPERIENCE -->
+        <hr class="hr" />
+        <div class="section-title">Work Experiences</div>
+        <div class="jobsection">
+            <div class="job-title">SDE-1 Frontend – Appscrip</div>
+            <div class="job-meta">Apr 2024 – Present</div>
+        </div>
+        <ul>
+            <li>Designed and developed secure multi-user dashboard features using React.js, Next.js, and TypeScript with
+                JWT authentication and role-based authorization.</li>
+            <li>Integrated Strapi CMS for dynamic admin-driven content updates.</li>
+            <li>Collaborated with UI/UX designers and backend teams to integrate frontend components via REST APIs.</li>
+            <li>Optimized applications for performance, scalability, and cross-browser compatibility.</li>
+            <li>Conducted code reviews and mentored junior developers.</li>
+        </ul>
+
+        <!-- work experience -->
+        <div class="jobsection">
+            <div class="job-title">Web Developer – Driver on Hire</div>
+            <div class="job-meta">Dec 2023 – Mar 2024</div>
+        </div>
+        <ul>
+            <li>Integrated Google Places API and Mapbox for geolocation workflows.</li>
+            <li>Implemented real-time FCM push notifications for driver assignments.</li>
+            <li>Improved performance and Core Web Vitals compliance.</li>
+        </ul>
+
+        <!-- TECHNICAL SKILLS -->
+        <hr class="hr" />
+        <div class="section-title">Technical Skills</div>
+        <div class="skills">
+            <div class="skill-row">
+                <span class="skill-title">Languages</span>
+                <span class="skill-items">JavaScript (ES6+), TypeScript</span>
+            </div>
+
+            <div class="skill-row">
+                <span class="skill-title">Frameworks</span>
+                <span class="skill-items">React.js, Next.js, Redux, Zustand</span>
+            </div>
+
+            <div class="skill-row">
+                <span class="skill-title">Styling</span>
+                <span class="skill-items">HTML5, CSS3, Tailwind CSS</span>
+            </div>
+
+            <div class="skill-row">
+                <span class="skill-title">APIs & Tools</span>
+                <span class="skill-items">REST APIs, Axios, Strapi CMS, JWT, Google Places API, Mapbox</span>
+            </div>
+
+            <div class="skill-row">
+                <span class="skill-title">Dev Tools</span>
+                <span class="skill-items">Git, GitHub Actions, Docker, Webpack, AWS</span>
+            </div>
+        </div>
+
+
+        <!-- EDUCATION -->
+          <hr class="hr" />
+        <div class="education-block">
+            <p class="education-title">Education</p>
+            <div class="edu-header">
+                <span class="degree">Master of Computer Application</span>
+                <span class="edu-date">July 2023 – June 2025</span>
+            </div>
+            <div class="university">
+                Dr. A.P.J. Abdul Kalam Technical University
+            </div>
+        </div>
+
+        <!-- ADDITIONAL -->
+        <!-- ADDITIONAL -->
+          <hr class="hr" />
+        <div class="section-title">Additional Information</div>
+
+        <div class="additional-block">
+            <div class="additional-row">
+                <span class="additional-label">Exam Achievement</span>
+                <span class="additional-value">NIMCET – All India Rank 1180</span>
+            </div>
+
+            <div class="additional-row">
+                <span class="additional-label">Certification</span>
+                <span class="additional-value">React – The Complete Guide (Academind)</span>
+            </div>
+
+            <div class="additional-row">
+                <span class="additional-label">Soft Skills</span>
+                <span class="additional-value">
+                    Research, Teamwork, Adaptability, Communication, Problem Solving
+                </span>
+            </div>
+        </div>
+
+</body>
+
+</html>
