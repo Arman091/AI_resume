@@ -3,8 +3,15 @@ import resumeData from './resumeData.json'
 export function Resume() {
   const { personalInfo, summary, workExperiences, technicalSkills, education, additionalInfo } = resumeData;
 
+  const handlePrint = () => {
+    window.print();
+  };
+
   return (
     <div className="container">
+      <button className="print-button" onClick={handlePrint}>
+        Print Resume
+      </button>
       {/* NAME */}
       <div className="author">
         <h1>{personalInfo.name}</h1>
@@ -90,7 +97,14 @@ export function Resume() {
         {additionalInfo.map((info, index) => (
           <div key={index} className="additional-row">
             <span className="additional-label">{info.label}</span>
-            <span className="additional-value">{info.value}</span>
+            <span className="additional-value">{info.value}
+              <span className="separator">
+               {info.link && <a href={info.link} target="_blank" rel="noopener noreferrer">View
+                </a>
+               }
+              </span>
+            </span>
+         
           </div>
         ))}
       </div>
