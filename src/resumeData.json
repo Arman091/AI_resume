@@ -24,26 +24,31 @@
       }
     ]
   },
-  "summary": "Frontend Developer with 2.5+ years of hands-on experience building user-centric, scalable web applications using React.js, Next.js, JavaScript, and TypeScript in Agile Scrum environments. Contributed to 10+ projects, delivering responsive interfaces, integrating REST APIs, and optimizing performance.",
+  "summary": "Next.js Developer with 2.5+ years of experience building scalable ecommerce and dashboard web applications using React.js, Next.js, TypeScript, Redux, and Tailwind CSS. Strong understanding of SSR, CSR, SSG, ISG, and performance optimization techniques including code splitting, lazy loading, and caching. Experienced in REST API integrations, token-based authentication, and Agile Scrum development.",
   "workExperiences": [
     {
       "title": "SDE-1 Frontend – Appscrip",
       "period": "Apr 2024 – Present",
       "responsibilities": [
-        "Designed and developed secure multi-user dashboard features using React.js, Next.js, and TypeScript with JWT authentication and role-based authorization.",
-        "Integrated Strapi CMS for dynamic admin-driven content updates.",
-        "Collaborated with UI/UX designers and backend teams to integrate frontend components via REST APIs.",
-        "Optimized applications for performance, scalability, and cross-browser compatibility.",
-        "Conducted code reviews and mentored junior developers."
+        "Developed and maintained scalable multi-user ecommerce dashboard applications using Next.js (Page Router) and React functional components with hooks and TypeScript.",
+        "Implemented Server-Side Rendering (SSR), Client-Side Rendering (CSR), and Static Site Generation (SSG) strategies to improve SEO performance and reduce page load time by 30%.",
+        "Built responsive and reusable UI components using Tailwind CSS following modern CSS best practices, improving UI consistency by 25%.",
+        "Integrated REST APIs with token-based JWT authentication and role-based authorization, ensuring secure and scalable access control.",
+        "Applied performance optimization techniques such as code splitting, lazy loading, and caching, improving Core Web Vitals score by 20%.",
+        "Collaborated closely with backend teams to integrate REST APIs and optimize data flow across applications.",
+        "Utilized Redux and Zustand for efficient state management in complex user workflows.",
+        "Participated in code reviews, enforced best coding practices, and mentored junior developers to improve overall code quality."
       ]
     },
     {
       "title": "Web Developer – Driver on Hire",
       "period": "Dec 2023 – Mar 2024",
       "responsibilities": [
-        "Integrated Google Places API and Mapbox for geolocation workflows.",
-        "Implemented real-time FCM push notifications for driver assignments.",
-        "Improved performance and Core Web Vitals compliance."
+        "Developed responsive UI components using React.js and Tailwind CSS for real-time driver booking workflows.",
+        "Integrated Google Places API, Mapbox, and REST APIs to enable dynamic geolocation-based features.",
+        "Implemented real-time FCM push notifications to enhance user engagement and reduce assignment delays by 15%.",
+        "Optimized frontend performance using lazy loading and efficient rendering techniques, improving application speed and cross-browser compatibility.",
+        "Ensured mobile-first responsive design and adherence to SEO best practices."
       ]
     }
   ],
@@ -54,15 +59,19 @@
     },
     {
       "category": "Frameworks",
-      "items": "React.js, Next.js, Redux, Zustand"
+      "items": "React.js, Next.js (Page Router), Redux, Redux Toolkit, Zustand"
     },
     {
       "category": "Styling",
-      "items": "HTML5, CSS3, Tailwind CSS"
+      "items": "HTML5, CSS3, Tailwind CSS, Responsive Design"
     },
     {
       "category": "APIs & Tools",
-      "items": "REST APIs, Axios, Strapi CMS, JWT, Google Places API, Mapbox"
+      "items": "REST APIs, GraphQL (basic understanding), Axios, Strapi CMS, JWT Authentication, Token-based Authorization, Google Places API, Mapbox"
+    },
+    {
+      "category": "Testing & Optimization",
+      "items": "Performance Optimization, Code Splitting, Lazy Loading, Caching, Core Web Vitals, SEO Best Practices"
     },
     {
       "category": "Dev Tools",
@@ -82,11 +91,11 @@
     {
       "label": "Certification",
       "value": "React – The Complete Guide (Academind)",
-      "link":"https://res.cloudinary.com/dfbgcmhoz/image/upload/v1689468993/reactCert_putlbv.png?trk=public_profile_see-credential"
+      "link": "https://res.cloudinary.com/dfbgcmhoz/image/upload/v1689468993/reactCert_putlbv.png?trk=public_profile_see-credential"
     },
     {
       "label": "Soft Skills",
-      "value": "Research, Teamwork, Adaptability, Communication, Problem Solving"
+      "value": "Agile Scrum, Code Reviews, Team Collaboration, Adaptability, Communication, Problem Solving"
     }
   ]
 }

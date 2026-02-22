@@ -1,7 +1,9 @@
 import resumeData from './resumeData.json'
 
-export function Resume() {
-  const { personalInfo, summary, workExperiences, technicalSkills, education, additionalInfo } = resumeData;
+export function Resume({data}) {
+  
+  if (!data) return <p>No resume data provided.</p>;
+  const { personalInfo, summary, workExperiences, technicalSkills, education, additionalInfo } = data;
 
   const handlePrint = () => {
     window.print();

@@ -1,0 +1,109 @@
+import { useState } from 'react';
+import Editor from '@monaco-editor/react';
+
+export function JsonEditor({ onUpdate, currentData }) {
+  const [editorValue, setEditorValue] = useState('');
+  const [error, setError] = useState('');
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleEditorChange = (value) => {
+    setEditorValue(value || '');
+    setError('');
+  };
+
+  const handleUpdate = () => {
+    try {
+      const trimmed = editorValue.trim();
+      if (!trimmed) throw new Error('Input is empty');
+      
+      const parsedData = new Function(`return ${trimmed}`)();
+      
+      if (!parsedData?.personalInfo?.name) {
+        throw new Error('Missing required: personalInfo.name');
+      }
+
+      onUpdate(parsedData);
+      setError('');
+      setEditorValue('');
+      setIsOpen(false);
+    } catch (err) {
+      setError(err?.message || 'Invalid JavaScript object format');
+    }
+  };
+
+  const handleLoadCurrent = () => {
+    const formatted = JSON.stringify(currentData, null, 2);
+    setEditorValue(formatted);
+    setError('');
+  };
+
+  const handleClose = () => {
+    setIsOpen(false);
+    setEditorValue('');
+    setError('');
+  };
+
+  return (
+    <div className="json-input-container">
+      <button 
+        className="json-toggle-button" 
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        {isOpen ? '✕ Close Editor' : '⚙️ Edit Resume Data'}
+      </button>
+      
+      {isOpen && (
+        <div className="json-input-panel">
+          <div className="json-input-header">
+            <h3>Edit Resume Data</h3>
+            <button 
+              className="load-current-button" 
+              onClick={handleLoadCurrent}
+            >
+              Load Current Data
+            </button>
+          </div>
+          
+          <div className="monaco-editor-wrapper">
+            <Editor
+              height="400px"
+              defaultLanguage="javascript"
+              value={editorValue}
+              onChange={handleEditorChange}
+              theme="vs-light"
+              options={{
+                minimap: { enabled: false },
+                fontSize: 14,
+                wordWrap: 'on',
+                automaticLayout: true,
+                tabSize: 2,
+              }}
+            />
+          </div>
+          
+          {error && (
+            <div className="json-error">
+              ⚠️ {error}
+            </div>
+          )}
+          
+          <div className="json-input-actions">
+            <button 
+              className="update-button" 
+              onClick={handleUpdate}
+              disabled={!editorValue.trim()}
+            >
+              Update Resume
+            </button>
+            <button 
+              className="cancel-button" 
+              onClick={handleClose}
+            >
+              Cancel
+            </button>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
