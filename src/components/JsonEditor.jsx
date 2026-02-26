@@ -1,11 +1,13 @@
 import { useState } from 'react';
 import Editor from '@monaco-editor/react';
 import './jsoneditorStyle.css';
+import { AiPromptGuide } from './AiPromptGuide.jsx';
 export function JsonEditor({ onUpdate, currentData }) {
   const [editorValue, setEditorValue] = useState('');
   const [error, setError] = useState('');
   const [isOpen, setIsOpen] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
+  const [showHelp, setShowHelp] = useState(false);
   const handleEditorChange = (value) => {
     setEditorValue(value || '');
     setError('');
@@ -45,13 +47,21 @@ export function JsonEditor({ onUpdate, currentData }) {
 
   return (
     <div className="json-input-container">
+     <div className='buttonwrapper'> 
       <button 
         className="json-toggle-button" 
         onClick={() => setIsOpen(!isOpen)}
       >
-        {isOpen ? '✕ Close Editor' : '⚙️ Edit Resume Data'}
+        {isOpen ? '✕ Close Editor' : '⚙️ Edit Resume'}
       </button>
-      
+       <button 
+         className="json-toggle-button" 
+         onClick={() => setShowHelp(true)}
+       >
+        Help
+      </button>
+      </div>
+      <AiPromptGuide isOpen={showHelp} onClose={() => setShowHelp(false)} />
       {isOpen && (
         <div className="json-input-panel">
           <div className="json-input-header">

@@ -214,3 +214,15 @@
   display: flex;
   flex-direction: column;
 }
+
+.buttonwrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* height: 100vh; */
+  justify-content: center;
+  gap: 20px;
+  button {
+    min-width: 140px;
+  }
+}
