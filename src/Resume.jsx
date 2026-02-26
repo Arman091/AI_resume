@@ -1,5 +1,11 @@
 
-
+/**
+ * Resume Component.
+ * Renders the visual layout of the resume based on the provided data object.
+ * 
+ * @param {Object} props - Component props.
+ * @param {Object} props.data - The resume data object containing personalInfo, workExperiences, etc.
+ */
 export function Resume({data}) {
 
   if (!data) return <p>No resume data provided.</p>;

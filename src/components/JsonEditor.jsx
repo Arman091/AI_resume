@@ -1,16 +1,16 @@
 import { useState } from 'react';
 import Editor from '@monaco-editor/react';
-
+import './jsoneditorStyle.css';
 export function JsonEditor({ onUpdate, currentData }) {
   const [editorValue, setEditorValue] = useState('');
   const [error, setError] = useState('');
   const [isOpen, setIsOpen] = useState(false);
-
+  const [isExpanded, setIsExpanded] = useState(false);
   const handleEditorChange = (value) => {
     setEditorValue(value || '');
     setError('');
   };
-
+  
   const handleUpdate = () => {
     try {
       const trimmed = editorValue.trim();
@@ -55,18 +55,28 @@ export function JsonEditor({ onUpdate, currentData }) {
       {isOpen && (
         <div className="json-input-panel">
           <div className="json-input-header">
-            <h3>Edit Resume Data</h3>
-            <button 
-              className="load-current-button" 
-              onClick={handleLoadCurrent}
-            >
-              Load Current Data
-            </button>
+           <h3>Edit Resume Data</h3>
+          <div className="header-actions">
+              {/* NEW EXPAND BUTTON */}
+              <button 
+                className="expand-toggle-button" 
+                onClick={() => setIsExpanded(!isExpanded)}
+                title={isExpanded ? "Shrink" : "Expand"}
+              >
+                {isExpanded ? '❐' : '⛶'}
+              </button>
+              <button 
+                className="load-current-button" 
+                onClick={handleLoadCurrent}
+              >
+                Load Current Data
+              </button>
+            </div>
           </div>
           
           <div className="monaco-editor-wrapper">
             <Editor
-              height="400px"
+              height={isExpanded ? "calc(100vh - 200px)" : "400px"}
               defaultLanguage="javascript"
               value={editorValue}
               onChange={handleEditorChange}
